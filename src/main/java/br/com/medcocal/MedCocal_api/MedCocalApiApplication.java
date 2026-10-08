@@ -1,4 +1,4 @@
-package br.com.medcocal.MedCocal_api;
+package br.com.medcocal.medcocal_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
