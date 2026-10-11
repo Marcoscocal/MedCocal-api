@@ -1,15 +1,11 @@
 package br.com.medcocal.medcocal_api.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "pacientes")
 @PrimaryKeyJoinColumn(name = "id")
-@Getter
-@Setter
 public class Paciente extends Usuario {
 
     @Column(nullable = false, unique = true, length = 14)
@@ -17,4 +13,11 @@ public class Paciente extends Usuario {
 
     @Column(nullable = false)
     private LocalDate dataNascimento;
+
+    // --- Getters e Setters Manuais ---
+    public String getCpf() { return cpf; }
+    public void setCpf(String cpf) { this.cpf = cpf; }
+
+    public LocalDate getDataNascimento() { return dataNascimento; }
+    public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
 }
