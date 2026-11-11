@@ -21,6 +21,18 @@ import br.com.medcocal.medcocal_api.dto.PacienteRespostaDTO;
 import br.com.medcocal.medcocal_api.service.PacienteService;
 import jakarta.validation.Valid;
 
+import org.springframework.web.bind.annotation.CrossOrigin; // 1. Adicione este import se já não houver
+
+@RestController
+@RequestMapping("/api/pacientes")
+@CrossOrigin(origins = "*") // 2. Cole esta linha aqui em cima
+public class PacienteController {
+    
+    @Autowired
+    private PacientesService pacientesService;
+    
+    // ... restante do código
+}
 @RestController
 @RequestMapping("/api/pacientes")
 public class PacienteController {
